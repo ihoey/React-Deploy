@@ -7,8 +7,8 @@ jobs:
     name: build # job的名称
     steps: # job的步骤
       - name: Checkout # checkout项目到虚拟机上
-      - uses: actions/checkout@v2 # 这里使用的是GitHub官方提供的action
+        uses: actions/checkout@v2 # 这里使用的是GitHub官方提供的action
       - name: Install # 安装依赖
-      - run: yarn
+        run: yarn
       - name: Build # 构建项目
-      - run: yarn build
+        run: yarn build
