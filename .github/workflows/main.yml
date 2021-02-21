@@ -1,0 +1,17 @@
+name: CI # 名称
+on: [push] # 表示push的时候运行此action
+
+jobs: 
+  build_job: 
+    run-on: ubuntu-latest # 运行环境 Ubuntu 最新版本
+    name: build # job的名称
+    steps: # job的步骤
+      - name: Checkout  # checkout项目到虚拟机上
+      - uses: actions/checkout@v2 #这里使用的是GitHub官方提供的action
+
+      - name: Install  # 安装依赖
+      - run: yarn 
+      - name: Build # 构建项目
+      - run: yarn build
+
+
